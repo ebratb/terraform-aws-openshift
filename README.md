@@ -101,6 +101,16 @@ You will be asked to accept the host key of the bastion server (this is so that 
 
 It can take up to 30 minutes to deploy. If this fails with an `ansible` not found error, just run it again.
 
+Connect to the master node and issue the following commands:
+```bash
+kubectl get nodes
+
+kubectl label nodes <master> region=infra
+kubectl label nodes <node1> region=infra
+kubectl label nodes <node2> region=infra
+```
+
+
 Once the setup is complete, just run:
 
 ```bash
