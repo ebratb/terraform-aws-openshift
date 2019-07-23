@@ -70,6 +70,9 @@ Create the infrastructure first:
 eval `ssh-agent -s`
 
 # Create the infrastructure.
+export AWS_ACCESS_KEY_ID=<access key>
+export AWS_SECRET_ACCESS_KEY=<secret key>
+
 make infrastructure
 ```
 
